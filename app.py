@@ -8,9 +8,10 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 import time
+import random
 
 app = Flask(__name__)
-app.secret_key = 'multilogin@123'
+app.secret_key = random.randbytes(50).hex()
 
 def generate_matplotlib_plot():
     plt.figure()
